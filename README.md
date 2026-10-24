@@ -1,6 +1,6 @@
 # MathStudyForTest
 
-An independent responsive chess playground. Intended production URL: https://mathstudyfortest.vercel.app
+An independent responsive chess playground. Production URL: https://mathstudyfortest.vercel.app
 
 ## Features and routes
 - `/`: overview and navigation.
@@ -31,3 +31,8 @@ Deploy the GitHub repository on Vercel using the Vite preset, build command `npm
 
 ## Privacy
 No account, tracking scripts, or credentials. Puzzle progress uses localStorage. Loading the Events page sends a public API request to Lichess. Hosting providers receive normal web requests.
+
+## Deployment and verification (24 October 2026)
+Production is deployed on Vercel and the requested mathstudyfortest.vercel.app domain is assigned. This release was deployed from the same source committed to this repository. Vercel returned repo_no_access when asked to connect the repository; automatic deployments on push are not connected and need the account owner to grant Vercel access to this repository and connect it in project Git settings. No credentials were collected or protections disabled.
+
+Verified: all six documented routes return HTTP 200; query strings remain on the same domain; production browser tests covered e4 plus a computer reply, undo, puzzle checkmate completion, FEN loading and analysis, PGN import (London System opening), and rendering current Lichess tournaments. Four automated tests pass, including castling, en passant, promotion, PGN round-trip, all puzzle solutions, and analysis position preservation. The production build passes. Mobile breakpoints are implemented in CSS; a separate real-device test was not performed.
